@@ -41,7 +41,7 @@ public class WebImpl {
 
     ServerConnector connector = new ServerConnector(server);
     connector.setHost(System.getProperty("stargate.listen_address"));
-    connector.setPort(System.getProperty("stargate.graphql_port", 8080));
+    connector.setPort(System.getProperty("stargate.graphql_port", "8080"));
     server.addConnector(connector);
 
     ServletContextHandler context = new ServletContextHandler(ServletContextHandler.SESSIONS);
